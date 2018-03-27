@@ -1,4 +1,4 @@
-def CONTAINER_NAME="Kwetter"
+def CONTAINER_NAME="SOP"
 def CONTAINER_TAG="latest"
 
 node {
