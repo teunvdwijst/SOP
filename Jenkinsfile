@@ -37,7 +37,8 @@ node {
 			rtMaven.deployer.deployArtifacts = false // Disable artifacts deployment during Maven run
 
 			buildInfo = Artifactory.newBuildInfo()
-			rtMaven.run pom: 'pom.xml', goals: '-U clean install', buildInfo: buildInfo
+			rtMaven.run pom: 'pom.xml', goals: 'clean install', buildInfo: buildInfo
+			rtMaven.deployer.deployArtifacts buildInfo
 			server.publishBuildInfo buildInfo
 		} catch(error){
 			echo "The artifactory server could not be reached ${error}"
