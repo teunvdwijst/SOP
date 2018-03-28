@@ -4,7 +4,7 @@ services:
   mysql:
     image: mysql/mysql-server:5.7.21
     volumes:
-      - /opt/mysql_data:/var/lib/mysql
+      - /opt/mysql_data:/var/lib/mysql_prod
     ports:
       - "3308:3306"
     environment:
