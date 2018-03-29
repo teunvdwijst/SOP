@@ -17,9 +17,9 @@ services:
     volumes:
       - /opt/payara41/deployments:/home/teun/production_ENV/war
     ports:
-      - "10000:8080"
-      - "4849:4848"
-      - "8182:8181"
+      - "10001:8080"
+      - "4850:4848"
+      - "8183:8181"
     links:
       - mysql
     depends_on:
