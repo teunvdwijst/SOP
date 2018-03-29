@@ -14,8 +14,6 @@ services:
 
   payara:
     build: .
-    volumes:
-      - /opt/payara41/deployments:/home/teun/production_ENV/war
     ports:
       - "10001:8080"
       - "4850:4848"
