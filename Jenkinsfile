@@ -47,7 +47,8 @@ node {
 
     stage('Docker-compose'){
         try {
-            sh "sudo docker-compose up --force-recreate -d"
+            sh "sudo docker-compose build --no-cache"
+            sh "sudo docker-compose up -d"
         }catch(error){}
     }
 }
